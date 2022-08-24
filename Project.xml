@@ -27,8 +27,7 @@
 	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
 
 	<!--Mobile-specific-->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="1280" height="720" resizable="false" />
-	<assets path="assets/android" if="android" />
+	<window if="mobile" orientation="landscape" fullscreen="true" width="1280" height="720" resizable="false"/>
 
 	<!--Switch-specific-->
 	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
@@ -93,6 +92,7 @@
 	
 	<assets path='example_mods' rename='mods' embed='false'/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
+	<assets path='LICENSE' rename='LICENSE.txt' />
 	<!-- <template path='mods' /> -->
 	
 	<!-- <assets path="CHANGELOG.md" rename='changelog.txt'/> -->
@@ -103,6 +103,8 @@
 		NOT USING A DIRECT THING TO THE ASSET!!!
 	-->
 	<assets path="assets/fonts" embed='true'/>
+
+	<assets path="assets/android" if="android" />
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
@@ -118,8 +120,7 @@
 	<haxelib name="faxe" if='switch'/>
 	<haxelib name="polymod"/>
 	<haxelib name="discord_rpc" if="windows"/>
-	<haxelib name="linc_luajit" if="windows"/>
-	
+	<haxelib name="linc_luajit"/>
 	<haxelib name="extension-androidtools" if="android" />
 
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
@@ -173,6 +174,7 @@
 	<android permission="android.permission.ACCESS_NETWORK_STATE" />
 	<android permission="android.permission.ACCESS_WIFI_STATE" />
 	<android permission="android.permission.INTERNET" />
+
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
