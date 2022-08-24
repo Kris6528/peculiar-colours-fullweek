@@ -42,7 +42,7 @@ jobs:
           haxe-version: 4.2.5
         run: |
           haxe -version
-          haxelib install hxnodejs
+        # haxelib install hxnodejs
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
