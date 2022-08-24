@@ -50,7 +50,7 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
-		#if polymod
+		#if desktop
 		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
 		#end
 		
