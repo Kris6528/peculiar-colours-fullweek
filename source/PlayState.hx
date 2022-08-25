@@ -1166,6 +1166,11 @@ class PlayState extends MusicBeatState
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+
+                #if android
+                addAndroidControls();
+                #end
+
 		if (FlxG.save.data.songPosition)
 		{
 			songPosBG.cameras = [camHUD];
