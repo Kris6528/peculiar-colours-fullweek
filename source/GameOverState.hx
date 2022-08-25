@@ -50,7 +50,7 @@ class GameOverState extends FlxTransitionableState
 		FlxTween.tween(restart, {y: restart.y + 40}, 7, {ease: FlxEase.quartInOut, type: PINGPONG});
 
 		#if android
-		addVirtualPad(A_B);
+		addVirtualPad(NONE, A_B);
 		#end
 
 		super.create();
