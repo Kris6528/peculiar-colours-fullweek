@@ -99,6 +99,10 @@ class OptionsMenu extends MusicBeatState
 		add(tipText);
 		#end
 
+                #if android
+                addVirtualPad(LEFT_FULL, A_B_C);
+                #end
+
 		super.create();
 	}
 
@@ -108,12 +112,14 @@ class OptionsMenu extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-                /*#if android
-                if (virtualPad.buttonC.justPressed)
-                {
-                FlxG.switchState(new android.AndroidControlsSubState());
-                }
-                #end*/
+                        #if android
+			if (virtualPad.buttonC.justPressed) {
+				#if android
+				removeVirtualPad();
+				#end
+				openSubState(new android.AndroidControlsSubState());
+			}
+			#end
 
 			if (controls.BACK && !isCat)
 				FlxG.switchState(new MainMenuState());
