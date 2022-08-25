@@ -285,7 +285,8 @@ class DialogueBox extends FlxSpriteGroup
 		}
 		#end
 
-		if (FlxG.keys.justPressed.ANY  && dialogueStarted == true)
+		//if (FlxG.keys.justPressed.ANY  && dialogueStarted == true)
+		if (PlayerSettings.player1.controls.ACCEPT #if android || justTouched #end && dialogueStarted == true)
 		{
 			remove(dialogue);
 				
