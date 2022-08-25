@@ -66,7 +66,7 @@ class NGio
 
 		NG.core.verbose = true;
 		// Set the encryption cipher/format to RC4/Base64. AES128 and Hex are not implemented yet
-		NG.core.initEncryption(encKey); // Found in you NG project view
+		NG.core.setupEncryption(encKey); // Found in you NG project view
 
 		trace(NG.core.attemptingLogin);
 
