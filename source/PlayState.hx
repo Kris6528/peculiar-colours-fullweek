@@ -1345,6 +1345,10 @@ class PlayState extends MusicBeatState
 	{
 		inCutscene = false;
 
+                #if android
+                androidControls.visible = true;
+                #end
+
 		generateStaticArrows(0);
 		generateStaticArrows(1);
 
@@ -2566,6 +2570,10 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+                #if android
+                androidControls.visible = false;
+                #end
+
                 #if desktop
 		if (!loadRep)
 			rep.SaveReplay(saveNotes);
