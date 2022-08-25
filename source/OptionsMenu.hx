@@ -108,12 +108,12 @@ class OptionsMenu extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-                #if android
+                /*#if android
                 if (virtualPad.buttonC.justPressed)
                 {
                 FlxG.switchState(new android.AndroidControlsSubState());
                 }
-                #end
+                #end*/
 
 			if (controls.BACK && !isCat)
 				FlxG.switchState(new MainMenuState());
